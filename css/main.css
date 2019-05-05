@@ -1,0 +1,319 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Nunito:300,400,700|Oxygen:300,400');
+
+html,
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    font-weight: 300;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+}
+
+
+p,li{
+    font-size: 1rem;
+    display: block;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.navbar{
+   background-color: transparent;
+   padding: 40px 40px;
+}
+
+.navbar-brand{
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar-brand i{
+  font-weight: 300;
+  padding-right: 5px;
+  color: #eb0029;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 5px 0;
+  margin-left: 20px;
+  border-top: 2px solid transparent;
+  font-size: 0.87rem;
+  letter-spacing: 2px;
+}
+
+.nav-icon {
+  display: inline-block;
+  color: #fff;
+  padding-right: 5px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  border-top: 2px solid #eb0029;
+  color: #fff;
+}
+
+
+.navbar-light .navbar-nav .nav-link:hover {
+  border-top: 2px solid #eb0029;
+  color: #fff;
+}
+
+/*--humberuger menu---*/
+
+.navbar-toggler span{
+    color: #fff;
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.navbar-toggler:focus {
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+
+/*---dropdown menu---*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a1a1a;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    color: #a6a6a6;
+    font-size: 0.87rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.arrow-right {
+  padding-right: 5px;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover{
+  color: #fff;
+  font-weight: 400;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*---compressed----*/
+
+.navbar.compressed {
+  padding: 5px 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .38s ease;
+  -moz-transition: all .38s ease;
+  -ms-transition: all .38s ease;
+  transition: all .38s ease;
+  background-color: #000;
+}
+
+#hero-section{
+  background: linear-gradient(rgba(0,0,0, 0.95), rgba(0,0,0, 0.3)), url('../img/hero-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-caption {
+  max-width: 40rem;
+  color: #fff;
+}
+
+.hero-h1, 
+.hero-h2 {
+  font-family: 'Oxygen', sans-serif;
+
+}
+
+.hero-h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.hero-h2 {
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+  color: #e6e6e6;
+  margin-bottom: 50px;
+}
+
+.hero-btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 40px;
+  background-color: #eb0029;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  border-radius: 50px;
+}
+
+/*------------------ABOUT COMPANY----------------*/
+
+.about__company {
+  padding: 70px 0;
+  background-color: #f8f8f8;
+}
+
+.title-h2,
+.title-h5 {
+   font-family: 'Oxygen', sans-serif;
+   text-transform: capitalize;
+   font-weight: 300;
+}
+
+.first_one {
+  display: inline-block;
+  border-top: 1px solid #e0e0e0;
+  width: 400px;
+}
+
+.title-h2 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #262626;
+}
+
+.title-h5 {
+  color: #777d84;
+}
+
+.about_content_span {
+  margin: 20px 0;
+}
+
+.about_icon {
+  font-size: 7rem;
+  color: #eb0029;
+}
+
+
+.about_title_h3 {
+  text-transform: capitalize;
+}
+
+.about_content_content.left {
+  text-align: right;
+}
+
+.about_content_content.left .about_title_h3 {
+  color: #eb0029;
+}
+
+.about_content_content.right .about_title_h3 {
+  color: #262626;
+}
+
+.about_content_content.right {
+  text-align: left;
+}
+
+.about_content_content p{
+  margin: 20px 0 40px 0;
+}
+
+.about__company a{
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  font-weight: 600;
+
+}
+
+.about_content_content .button_left {
+  background-color: #eb0029;
+  padding: 20px 40px;
+  color: #fff;
+}
+
+.about_content_content .button_right {
+  padding: 20px 40px;
+  color: #262626;
+  border: 1px solid #262626;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
