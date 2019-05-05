@@ -126,7 +126,6 @@ img{
 
 .dropdown-content a:hover{
   color: #fff;
-  font-weight: 400;
 }
 
 .dropdown:hover .dropdown-content {
@@ -143,7 +142,7 @@ img{
   -moz-transition: all .38s ease;
   -ms-transition: all .38s ease;
   transition: all .38s ease;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #hero-section{
@@ -198,7 +197,7 @@ img{
 
 .about__company {
   padding: 70px 0;
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
 }
 
 .title-h2,
