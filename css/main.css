@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Nunito:300,400,700|Oxygen:300,400');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700|Oxygen:300,400&display=swap');
 
 html,
 body {
@@ -21,6 +21,13 @@ li {
 	margin-bottom: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Oxygen', sans-serif;
+}
 img {
 	display: block;
 	max-width: 100%;
@@ -48,6 +55,7 @@ img {
 	font-weight: 400;
 	color: #282828;
 	text-transform: uppercase;
+	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 	display: block;
 	padding: 5px 0;
@@ -87,6 +95,7 @@ img {
 
 .navbar-toggler:focus {
 	outline: none !important;
+	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 }
 
@@ -102,6 +111,7 @@ img {
 	position: absolute;
 	background-color: #000;
 	min-width: 200px;
+	-webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 }
@@ -136,22 +146,25 @@ img {
 	background-size: cover;
 	background-repeat: no-repeat;
 	-webkit-transition: all .38s ease-in-out;
-	-moz-transition: all .38s ease-in-out;
-	-ms-transition: all .38s ease-in-out;
 	transition: all .38s ease-in-out;
 	background-color: rgb(255, 255, 255, 0.93);
 }
 
 #hero-section {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.3))),
+		url('../img/hero-image.jpg');
 	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('../img/hero-image.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
-	-webkit-background-size: cover;
 	background-size: cover;
 	background-attachment: fixed;
 	width: 100%;
-	height: 750px;
+	height: 800px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -279,7 +292,7 @@ img {
 
 .service_col {
 	width: 100%;
-	height: 320px;
+	height: 400px;
 }
 
 .serv_h5 {
@@ -300,8 +313,9 @@ img {
 .specialities-image1,
 .specialities-image2 {
 	width: 100%;
-	height: 320px;
+	height: 400px;
 	position: relative;
+	-webkit-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 }
 
@@ -330,6 +344,7 @@ img {
 	width: 100%;
 	height: 100%;
 	padding: 10px;
+	-webkit-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 }
 
@@ -340,27 +355,49 @@ img {
 	color: #fff;
 	font-family: 'Oswald', sans-serif;
 	letter-spacing: 3px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	font-size: 25px;
 }
 
 /*---CALL TO ACTION SECTION ---*/
 .call_to_action {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))),
+		url('../img/call_hero.jpg');
 	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/call_hero.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
-	-webkit-background-size: cover;
 	background-size: cover;
 	padding: 100px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
 .call_content h3 {
 	text-transform: capitalize;
 	font-size: 1.4rem;
+}
+
+.call_content h3:after {
+	content: '';
+	display: block;
+	height: 1rem;
+	width: 40px;
+	margin: auto;
+	color: #eb0029;
+	border-bottom: 3px solid #eb0029;
+	padding-top: 1%;
 }
 
 .call_content img {
@@ -370,6 +407,20 @@ img {
 
 .call_color {
 	color: #ffff;
+}
+
+.btn.btn-danger {
+	margin-top: 3rem;
+	font-size: 1.2rem;
+	background-color: #eb0029;
+	border: none !important;
+	transition: 0.3s ease-in-out;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.btn.btn-danger:hover {
+	background-color: rgba(235, 0, 41, 0.7);
 }
 
 /*--- footer---*/
@@ -386,6 +437,8 @@ img {
 	border-bottom: 1px solid #eb0029;
 	width: 200px;
 	padding-bottom: 10px;
+	font-family: 'Nunito', sans-serif;
+	font-size: 14px !important;
 	margin-bottom: 20px;
 	font-size: 1rem;
 	letter-spacing: 2px;
@@ -400,12 +453,18 @@ img {
 
 .footer_col li {
 	text-transform: capitalize;
+	font-size: 0.8rem;
 }
 
 .footer_col a {
 	color: #fff;
 	text-decoration: none;
 	text-transform: capitalize;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer_col a:hover {
+	color: #eb0029;
 }
 
 .copyright {
@@ -415,14 +474,100 @@ img {
 	border-top: 1px solid #313646;
 	font-family: 'Oswald', sans-serif;
 	color: #f0f0f0;
+	font-size: 0.8rem;
 }
 
 .copyright-name {
 	color: #eb0029;
-	font-size: 14px;
 }
 
 .copyright a {
 	color: #ffff;
 	text-decoration: none;
+}
+
+/*------ ABOUT US SECTION ------*/
+
+#about-section {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.3))),
+		url('../img/hero-image.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('../img/hero-image.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	height: 500px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.other_page_content {
+	color: #fff;
+}
+
+.h1-other {
+	text-transform: uppercase;
+	font-size: 3rem;
+	font-family: 'Oxygen', sans-serif;
+	margin-top: 100px;
+	letter-spacing: 2px;
+}
+
+.h1-other:after {
+	content: '';
+	display: block;
+	height: 0.2em;
+	width: 80px;
+	margin: auto;
+	color: #eb0029;
+	border-bottom: 3px solid #eb0029;
+	padding-top: 1%;
+}
+
+.mission_values h3:after {
+	content: '';
+	display: block;
+	height: 0.2em;
+	width: 40px;
+	margin: left;
+	color: #eb0029;
+	border-bottom: 3px solid #eb0029;
+	padding-top: 1%;
+}
+
+.about.section-space {
+	background-color: #f6f6f6;
+}
+
+.about_content .wireless_upper {
+	text-transform: uppercase;
+}
+
+.about_content h3 {
+	margin-bottom: 10px;
+}
+.about_content p {
+	margin-bottom: 20px;
+}
+
+.about_img {
+	background: url('../img/hero-image.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 400px;
+}
+
+.mission_values h3 {
+	font-size: 3rem;
+}
+
+.about_left_content {
+	padding: 0 80px;
 }
